@@ -3,6 +3,7 @@
     margin: 0px;
     padding: 0px;
     border: none;
+    font-family: "Roboto","Arial",sans-serif;
 }
 
 .icon {
@@ -93,9 +94,10 @@
 
 .topBsearch_boundIp{
     display: flex;
-    height: 40px;
+    height: 38px;
     width: 520px;
     padding: 0 4px 0 16px;
+    overflow: hidden;
     /* margin-left: 32px; */
 }
 
@@ -104,14 +106,13 @@
     height: 24px;
     flex-grow: 1;
     background-color: #0f0f0f;
-    border: none;
+    outline: none;
     color: #fff;
+    font-size: 16px;
 }
 .topBsearch_input:focus{
-    outline: none
+    /* outline: none */
 }
-
-
 
 .material-symbols-outlined.icon.topBsearch_key {
     font-size: 20px;
@@ -121,12 +122,16 @@
     opacity: 1;
 }
 
-.topBsearch_iconSearch {
+.topBsearch_close.icon{
+    display: none;
+}
 
+.topBsearch_iconSearch {
+    position: relative;
 }
 
 .topbar_voice {
-
+    position: relative;
 }
 .color181818{
     background-color: #181818;
@@ -143,25 +148,38 @@
 
 .borderRight{
     width: 64px;
-    height: 40px;
+    height: 36px;
     border: 1px solid #303030 ;
     padding: 1px 6px ;
     border-radius: 0 40px 40px 0;
 }
 /*  */
 .topbar_create{
-
+    position: relative;
 }
 
 .topbar_ring{
-
+    position: relative;
 }
 
-.bound.marginRight-8 {
+.bound_btn.icon_noti{
+    position: absolute;
+    top: -4px;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+    padding: 0 4px;
+    background-color: red;
+    color: #fff;
+    font-size: 12px;
+}
+
+.bound_topbar_user{
     width: 60px;
     padding: 0 6px;
 }
-.bound.marginRight-8:hover{
+
+.bound_topbar_user:hover{
     cursor: pointer;
 }
 
@@ -173,6 +191,33 @@
     height: 32px;
 }
 
+.icon:hover>.popupTitle{
+    display: block;
+    /* left: -75px; */
+    transform: translateX(calc((24px - 100% - 16px) / 2)) ; 
+
+}
+/* popup title */
+.popupTitle{
+    display: none;
+    /* box-sizing: border-box */
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    margin: 8px;
+    background-color: #616161;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    font-family: "Roboto","Arial",sans-serif;
+    border-radius: 4px;
+    top: 37px;
+    left: 0px;
+}
+
 .marginRight-8 {
     margin-right: 8px;
 }
@@ -182,7 +227,7 @@
 }
 
 .marginLeft-40 {
-    /* margin-left: 40px; */
+    margin-left: 40px;
 }
 
 .padding-04 {
