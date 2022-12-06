@@ -12,6 +12,22 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+<!-- 
+    đặt lại tên các class cho đúng 
+    - input: -Xử lý khi nhập input thì in xanh viền border left - và thêm borderRight = 1px
+             - khi nhập thì icon close hiện ra - khi hết nhập thì đóng lại 
+             - khi click vô thì hiện thêm 1 icon kính lúp bên trái. blur-thì biến mất
+    - keyboard: khi click hiện ra virtual keyboard.
+    - mic: khi click hiện ra 1 bảng chọn nói: + 1 btn close(có class bound_btn), 1tile, 1p, 1 icon_mic(có class bound_btn)
+    - thông báo: 1title, 1btn_setting(hover hiện popup) + list_noti: - icon_dot
+                                                    - img_chanel
+                                                    - p>description
+                                                    - p>day
+                                                    - img_video
+                                                    - icon menu_mini
+    - user:
+
+ -->
 
 <body>
 
@@ -30,26 +46,35 @@
                 <div class="topbar_search bound">
                     <div class="bound padding-04">
                         <div class="bound topBsearch_boundIp borderLeft">
+                            <!-- hidden icon_search -->
+                            <i
+                                class="hidden_search topBsearch_iconSearch material-symbols-outlined paddingRight-10 hidden relative">search</i>
+                            <!-- end hidden icon_search -->
+
                             <input type="text" class="topBsearch_input" placeholder="Tìm kiếm">
                             <div class="bound  padding-02">
-                                <i class="topBsearch_key material-symbols-outlined icon ">keyboard_alt</i>
+                                <i class="topBsearch_key material-symbols-outlined icon relative visible">keyboard_alt
+                                </i>
                             </div>
-                            <!--  -->
-                            <div class="bound_btn hindden">
+                            <!-- hidden icon_close -->
+                            <div class="hidden_close bound_btn hidden">
                                 <i class="material-symbols-outlined topBsearch_close icon">
                                     close
                                 </i>
                             </div>
+                            <!-- end hidden icon_close -->
+
+
                         </div>
                         <div class="bound borderRight">
-                            <i class="topBsearch_iconSearch material-symbols-outlined icon">search
+                            <i class="topBsearch_iconSearch material-symbols-outlined icon relative">search
                                 <div class="popupTitle">Tìm kiếm</div>
                             </i>
                         </div>
                     </div>
 
                     <div class="bound_btn marginLeft-4  color181818">
-                        <i class="topbar_voice material-symbols-outlined icon ">mic
+                        <i class="topbar_voice material-symbols-outlined icon relative">mic
                             <div class="popupTitle">Tìm kiếm bằng giọng nói</div>
                         </i>
                     </div>
@@ -57,8 +82,23 @@
 
                 <div class="bound">
                     <div class="bound_btn marginRight-8 ">
-                        <i class="topbar_create material-symbols-outlined icon">videocam
+                        <i class="topbar_create material-symbols-outlined icon relative">video_call
                             <div class="popupTitle">Tạo</div>
+                            <!-- menu -->
+                            <ul class="multi-page-menu">
+                                <li class="multi-page-menu_child">
+                                    <i class="material-symbols-outlined icon marginRight-16">
+                                        smart_display
+                                    </i>
+                                    <p class="">Tải video lên</p>
+                                </li>
+                                <li class="multi-page-menu_child">
+                                    <i class="material-symbols-outlined icon marginRight-16">
+                                        sensors
+                                    </i>
+                                    <p class="">Phát trực tiếp</p>
+                                </li>
+                            </ul>
                         </i>
                     </div>
 
@@ -81,40 +121,255 @@
             </div>
 
 
+            <!-- của btn bàn phím -->
+            <img src="./keyboard.png" alt="" class="virtual_key fixed hidden">
+
+            <!-- của btn thông báo -->
+            <div class="notif hidden">
+                <div class="notif_header">
+                    <h2 class="notif_header_title paddingLeft-16">Thông báo</h2>
+
+                    <div class="bound_btn bgcolor282828 marginRight-8">
+                        <i class="material-symbols-outlined icon ">settings</i>
+                    </div>
+                </div>
+
+
+                <div class="notif_bound">
+                    <div class="notif_content">
+                        <div class="new">
+                            <i class="bound_btn new_dot"></i>
+                        </div>
+
+                        <img alt="" src="https://www.gstatic.com/images/branding/product/2x/youtube_96in128dp.png"
+                            class="notif_content_thumbnail"></img>
+
+                        <div class="boundColumn">
+                            <div class="notif_content_message">
+                                👍 Ai đó đã thích bình luận của bạn: "Th choi làm bẩn vl"
+                            </div>
+                            <p class="notif_content_day">3 ngày trước</p>
+                        </div>
+                        <img src="https://i.ytimg.com/vi/573K5YictdE/hqdefault.jpg" alt="" class="notif_content_img">
+
+                        <div class="div">
+                            <i class="notif_content_menu material-symbols-outlined icon">
+                                more_vert
+                            </i>
+                        </div>
+
+
+                    </div>
 
 
 
+                    <div class="notif_content">
+                        <div class="new">
+                            <i class="bound_btn new_dot"></i>
+                        </div>
+
+                        <img alt=""
+                            src="https://yt3.ggpht.com/ytc/AMLnZu8vhMNY22ytJsrtQQ-cRBrnAhmxWFIViuRfnSc=s88-c-k-c0x00ffffff-no-rj"
+                            class="notif_content_thumbnail"></img>
+
+                        <div class="boundColumn">
+                            <div class="notif_content_message">
+                                CEtivi đang phát trực tiếp: [UITCARRACING 2022 - BẢNG MỞ RỘNG]: CHẤM ĐIỂM VÒNG 2 ĐỐI
+                                KHÁNG
+                            </div>
+                            <p class="notif_content_day">3 ngày trước</p>
+                        </div>
+                        <img src="https://i.ytimg.com/vi/573K5YictdE/hqdefault.jpg" alt="" class="notif_content_img">
+
+                        <div class="bound40">
+                            <i class="notif_content_menu material-symbols-outlined icon">
+                                more_vert
+                            </i>
+                        </div>
 
 
+                    </div>
 
+                    <!-- làm thanh cuộn nữa -->
+                </div>
 
-
-
-
-            <!-- refbar -->
-            <div class="refbar">
-                <i class="refbar_home"></i>
-                <i class="refbar_shortVideo"></i>
-                <i class="refbar_channel"></i>
-                <i class="refbar_lib"></i>
             </div>
 
-            <!-- leftbar -->
-            <div class="leftbar">
+            <!-- của btn voice -->
+            <div class="findvoice hidden">
+                <!-- header -->
+                <div class="bound_findvoice">
+                    <div class="findvoice_title">Tìm kiếm bằng giọng nói</div>
+                    <div class="bound_close">
+                        <div class="bound_btn bgcolor212121">
+                            <i class="findvoice_icon-close material-symbols-outlined icon">close</i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bound_desc">
+                    <div class="findvoice_desc">Để tìm kiếm bằng giọng nói, hãy chuyển đến phần cài đặt trong trình
+                        duyệt của bạn và cho phép truy cập vào micrô</div>
+                </div>
+
+                <div class="bound_voice">
+                    <div class="bound_btn_iconvoice">
+                        <i class="findvoice_icon-voice  material-symbols-outlined icon sizeicon-40">mic</i>
+                    </div>
+                </div>
 
             </div>
 
-            <!-- listvideo -->
-            <div class="listvideo">
+            <!-- của user -->
+            <div class="menuUser">
+                <!-- header -->
+                <div class="menuUser_header">
+                    <div alt="" class="menuUser_avatar marginRight-16"></div>
+                    <div class="menuUser_heading">
+                        <h1>Sơn Đinh Trọng Tùng</h1>
+                        <h1>@soninhtrongtung6089</h1>
+                        <a href="">Quản lý Tài khoản Google của bạn</a>
+                    </div>
+                </div>
+
+                <div class="menuUser_bound_menu">
+                    <!-- static -->
+                    <div class="menuUser_scope">
+                        <i class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">account_box</i>
+                        <p class="menuUser_name">Kênh của bạn</p>
+                    </div>
+
+                    <!-- studio -->
+                    <div class="menuUser_scope">
+                        <i class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">token</i>
+                        <p class="menuUser_name">YouTube Studio</p>
+                    </div>
+
+                    <!--  -->
+                    <div class="menuUser_scope">
+                        <i
+                            class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">switch_account</i>
+                        <p class="menuUser_name">Chuyển đổi tài khoản</p>
+                    </div>
+
+                    <div class="menuUser_scope">
+                        <i class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">logout</i>
+                        <p class="menuUser_name">Đăng xuất</p>
+                    </div>
+                </div>
+
+                <div class="menuUser_bound_menu">
+                    <!--  -->
+                    <div class="menuUser_scope">
+                        <i class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">paid</i>
+                        <p class="menuUser_name">Giao dịch mua và gói thành viên</p>
+                    </div>
+
+                    <!--  -->
+                    <div class="menuUser_scope">
+                        <i
+                            class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">local_police</i>
+                        <p class="menuUser_name">Dữ liệu của bạn trong YouTube</p>
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="menuUser_bound_menu">
+                    <div class="menuUser_scope">
+                        <i
+                            class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">brightness_3</i>
+                        <p class="menuUser_name">Giao diện: Giao diện thiết bị</p>
+                    </div>
+                    <!--  -->
+
+                    <!--  -->
+                    <div class="menuUser_scope">
+                        <i class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">translate</i>
+                        <p class="menuUser_name">Ngôn ngữ: Tiếng Việt</p>
+                    </div>
+
+                    <!--  -->
+                    <div class="menuUser_scope">
+                        <i
+                            class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">admin_panel_settings</i>
+                        <p class="menuUser_name">Chế độ hạn chế: Đã tắt</p>
+                    </div>
+                    <!--  -->
+
+                    <div class="menuUser_scope">
+                        <i class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">language</i>
+                        <p class="menuUser_name">Địa điểm: Việt Nam</p>
+                    </div>
+                    <!--  -->
+
+                    <!--  -->
+                    <div class="menuUser_scope">
+                        <i class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">keyboard</i>
+                        <p class="menuUser_name">Phím tắt</p>
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="menuUser_bound_menu">
+
+                    <div class="menuUser_scope">
+                        <i class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">settings</i>
+                        <p class="menuUser_name">Cài đặt</p>
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="menuUser_bound_menu">
+                    <div class="menuUser_scope">
+                        <i class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">help</i>
+                        <p class="menuUser_name">Trợ giúp</p>
+                    </div>
+                    <!--  -->
+
+                    <div class="menuUser_scope">
+                        <i class="material-symbols-outlined menuUser_thumbnail_icon marginRight-16 icon">sms_failed</i>
+                        <p class="menuUser_name">Gửi ý kiến phản hồi</p>
+                    </div>
+                    <!--  -->
+                </div>
 
             </div>
+        </div>
 
 
 
+
+
+
+
+        <!-- refbar -->
+        <div class="refbar">
+            <i class="refbar_home"></i>
+            <i class="refbar_shortVideo"></i>
+            <i class="refbar_channel"></i>
+            <i class="refbar_lib"></i>
+        </div>
+
+        <!-- leftbar -->
+        <div class="leftbar">
 
         </div>
 
+        <!-- listvideo -->
+        <div class="listvideo">
+
+        </div>
+
+
+
+
     </div>
+
+    </div>
+
+    <script src="./index.js">
+
+    </script>
 
 </body>
 
