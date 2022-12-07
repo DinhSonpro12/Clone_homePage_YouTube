@@ -653,25 +653,38 @@
 
 /* <!-- của menu --> */
 .hehe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
     display: flex;
     background-color: #0f0f0f;
     width: 240px;
     height: 654px;
+    flex-direction: column;
+}
+
+.guidecontent_header {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    padding-left: 16px;
+    width: 240px;
+    height: 56px;
+    background-color: #0f0f0f;
 }
 
 .guidecontent {
     display: flex;
-    position: fixed;
-    z-index: 2;
     height: 609px;
     flex-direction: column;
     background-color: #0f0f0f;
     max-height: 654px;
-    top: 56px;
-    left: 0;
     justify-content: flex-start;
     overflow-y: hidden;
 }
+
+/* top: 56px; */
 
 .guidecontent:hover{
     overflow-y: scroll;
@@ -681,17 +694,7 @@
     display: none;
 }
 
-.guidecontent_header {
-    position: fixed;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    justify-content: flex-start;
-    padding-left: 16px;
-    width: 240px;
-    height: 56px;
-    background-color: #0f0f0f;
-}
+
 
 .content_bound_menu {
     display: flex;
@@ -719,6 +722,7 @@
     flex-direction: row;
     align-items: center;
     padding: 0px 12px;
+    cursor: pointer;
 }
 
 .bound_menu_scope:hover {
