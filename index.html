@@ -336,7 +336,7 @@
             </div>
 
             <!-- của menu -->
-            <div class="hehe">
+            <div class="hehe hidden">
                 <div class="bound guidecontent_header">
                     <div class="bound_btn">
                         <i class="topbar_iconInteration material-symbols-outlined icon">menu</i>
@@ -562,8 +562,8 @@
                                 <a href="">Người sáng tạo</a>
                                 <a href="">Quảng cáo</a>
                                 <a href="">Nhà phát triển</a>
-                              </div>
-                    
+                            </div>
+
                             <div id="guide-links-secondary" class="content_bound_menu">
                                 <a href="">Điều khoản</a>
                                 <a href="">Quyền riêng tư</a>
@@ -571,7 +571,7 @@
                                 <a href="">Cách YouTube hoạt động</a>
                                 <a href="">Thử các tính năng mới</a>
                             </div>
-                            
+
                             <div id="copyright" class="content_bound_menu">© 2022 Google LLC</div>
                         </div>
 
@@ -580,51 +580,77 @@
 
                 </div>
             </div>
-            <!-- over -->
-            <div class="opacity">
-                
-            </div>
-            <!-- over -->
-
-
+            <!-- overlay -->
+            <div class="opacity hidden"></div>
+            <!-- overlay -->
         </div>
-
-
-        <div id="guide-links-primary" class="style-scope ytd-guide-renderer">
-            <a slot="guide-links-primary" href="https://www.youtube.com/about/" style="display: none;">Giới thiệu
-                <a slot="guide-links-primary" href="https://www.youtube.com/about/press/" style="display: none;">Báo chí
-                <a slot="guide-links-primary" href="https://www.youtube.com/about/copyright/" style="display: none;">Bản quyền
-                <a slot="guide-links-primary" href="/t/contact_us/" style="display: none;">Liên hệ với chúng tôi
-                <a slot="guide-links-primary" href="https://www.youtube.com/creators/" style="display: none;">Người sáng tạo
-                <a slot="guide-links-primary" href="https://www.youtube.com/ads/" style="display: none;">Quảng cáo
-                <a slot="guide-links-primary" href="https://developers.google.com/youtube" style="display: none;">Nhà phát triển
-                
-          </div>
-
 
         <!-- refbar -->
         <div class="refbar">
-            <i class="refbar_home"></i>
-            <i class="refbar_shortVideo"></i>
-            <i class="refbar_channel"></i>
-            <i class="refbar_lib"></i>
+            <div class="refbar_element">
+                <i class="material-symbols-outlined icon" id="refbar_home">home</i>
+                <p class="refbar_element_desc">Trang chủ</p>
+            </div>
+
+            <div class="refbar_element">
+                <i class="material-symbols-outlined icon" id="refbar_shortVideo">radio</i>
+                <p class="refbar_element_desc">Shorts</p>
+            </div>
+
+            <div class="refbar_element">
+                <i class="material-symbols-outlined icon" id="refbar_channel">subscriptions</i>
+                <p class="refbar_element_desc">Kênh đăng kí</p>
+            </div>
+
+            <div class="refbar_element">
+                <i class="material-symbols-outlined icon" id="refbar_lib">video_library</i>
+                <p class="refbar_element_desc">Thư viện</p>
+            </div>
         </div>
 
-        <!-- leftbar -->
-        <div class="leftbar">
+        <!-- scroll_bar -->
+        <div class="scroll_container">
+            
+            <div id="left_arow" class="scroll_container_arrow">
+                <div class="bound_btn">
+                    <i class="material-symbols-outlined icon">
+                        navigate_before
+                    </i>
+                </div>
+                <div class="filter"></div>
+            </div>
 
+            <div class="scroll_container_item scroll_container_item-all">Tất cả</div>
+            <div class="scroll_container_item">Danh sách kết hợp</div>
+            <div class="scroll_container_item">Âm nhạc</div>
+            <div class="scroll_container_item">Trò chơi</div>
+            <div class="scroll_container_item">trực tiếp</div>
+            <div class="scroll_container_item">hoạt họa</div>
+            <div class="scroll_container_item">bóng đá</div>
+            <div class="scroll_container_item">đọc rap</div>
+            <div class="scroll_container_item"> ăn</div>
+            <div class="scroll_container_item">trò chơi hành động phiêu lưu</div>
+            <div class="scroll_container_item">mới tải lên gần đây</div>
+            <div class="scroll_container_item">đã xem</div>
+            <div class="scroll_container_item">đề xuất</div>
+            <div class="scroll_container_item">mới tải lên gần đây</div>
+            <div class="scroll_container_item">đã xem</div>
+            <div class="scroll_container_item">đề xuất</div>
+            
+            <div id="right_arow" class="scroll_container_arrow">
+                <div class="bound_btn">
+                    <i class="material-symbols-outlined icon">
+                        navigate_next
+                    </i>
+                </div>
+                <div class="filter"></div>
+            </div>
         </div>
 
         <!-- listvideo -->
         <div class="listvideo">
 
         </div>
-
-
-
-
-    </div>
-
     </div>
 
     <script src="./index.js">
