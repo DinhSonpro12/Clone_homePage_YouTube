@@ -6,41 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <!-- <script src="https://kit.fontawesome.com/6d87b8368c.js" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" /> -->
+    <link rel="stylesheet" href="./style/css/style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<!-- 
-    đặt lại tên các class cho đúng 
-    - input: -Xử lý khi nhập input thì in xanh viền border left - và thêm borderRight = 1px
-             - khi nhập thì icon close hiện ra - khi hết nhập thì đóng lại 
-             - khi click vô thì hiện thêm 1 icon kính lúp bên trái. blur-thì biến mất
-    - keyboard: khi click hiện ra virtual keyboard.
-    - mic: khi click hiện ra 1 bảng chọn nói: + 1 btn close(có class bound_btn), 1tile, 1p, 1 icon_mic(có class bound_btn)
-    - thông báo: 1title, 1btn_setting(hover hiện popup) + list_noti: - icon_dot
-                                                    - img_chanel
-                                                    - p>description
-                                                    - p>day
-                                                    - img_video
-                                                    - icon menu_mini
-    - user:
-
- -->
 
 <body>
-
     <div class="root ">
         <div class="content ">
             <!-- topbar -->
             <div class="content_topbar">
-
                 <div class="bound">
                     <div class="bound_btn">
                         <i class="topbar_iconInteration material-symbols-outlined icon">menu</i>
                     </div>
-                    <img src="./yt.png" alt="" class="topbar_thumbnailYT">
+                    <img src="./style/img/yt.png" alt="" class="topbar_thumbnailYT">
                 </div>
 
                 <div class="topbar_search bound">
@@ -64,7 +44,6 @@
                             </div>
                             <!-- end hidden icon_close -->
 
-
                         </div>
                         <div class="bound borderRight">
                             <i class="topBsearch_iconSearch material-symbols-outlined icon relative">search
@@ -85,7 +64,7 @@
                         <i class="topbar_create material-symbols-outlined icon relative">video_call
                             <div class="popupTitle">Tạo</div>
                             <!-- menu -->
-                            <ul class="multi-page-menu">
+                            <ul class="multi-page-menu hidden">
                                 <li class="multi-page-menu_child">
                                     <i class="material-symbols-outlined icon marginRight-16">
                                         smart_display
@@ -120,9 +99,8 @@
                 </div>
             </div>
 
-
             <!-- của btn bàn phím -->
-            <img src="./keyboard.png" alt="" class="virtual_key fixed hidden">
+            <img src="./style/img/keyboard.png" alt="" class="virtual_key fixed hidden">
 
             <!-- của btn thông báo -->
             <div class="notif hidden">
@@ -133,7 +111,6 @@
                         <i class="material-symbols-outlined icon ">settings</i>
                     </div>
                 </div>
-
 
                 <div class="notif_bound">
                     <div class="notif_content">
@@ -157,11 +134,7 @@
                                 more_vert
                             </i>
                         </div>
-
-
                     </div>
-
-
 
                     <div class="notif_content">
                         <div class="new">
@@ -186,16 +159,11 @@
                                 more_vert
                             </i>
                         </div>
-
-
                     </div>
-
-                    <!-- làm thanh cuộn nữa -->
                 </div>
-
             </div>
 
-            <!-- của btn voice -->
+            <!-- click btn_voice_topbar  -->
             <div class="findvoice hidden">
                 <!-- header -->
                 <div class="bound_findvoice">
@@ -220,7 +188,7 @@
 
             </div>
 
-            <!-- của user -->
+            <!-- click btn_user_topbar -->
             <div class="menuUser hidden">
                 <!-- header -->
                 <div class="menuUser_header">
@@ -341,12 +309,12 @@
                     <div class="bound_btn">
                         <i class="topbar_iconInteration material-symbols-outlined icon">menu</i>
                     </div>
-                    <img src="./yt.png" alt="" class="topbar_thumbnailYT">
+                    <img src="./style/img/yt.png" alt="" class="topbar_thumbnailYT">
                 </div>
 
                 <div class="guidecontent">
                     <div class="guidecontent_content">
-                        <!-- dsdsd -->
+                        <!-- Trang chủ -->
                         <div class="content_bound_menu">
                             <!-- static -->
                             <div class="bound_menu_scope">
@@ -370,7 +338,7 @@
                             </div>
                         </div>
 
-                        <!-- dsdsdsd -->
+                        <!-- Shorts -->
                         <div class="content_bound_menu">
                             <!-- static -->
                             <div class="bound_menu_scope">
@@ -522,7 +490,6 @@
 
                         </div>
 
-                        <!-- asasas -->
                         <div class="content_bound_menu">
                             <!-- static -->
                             <div class="bound_menu_scope">
@@ -574,18 +541,16 @@
 
                             <div id="copyright" class="content_bound_menu">© 2022 Google LLC</div>
                         </div>
-
-
                     </div>
-
                 </div>
             </div>
+
             <!-- overlay -->
             <div class="opacity hidden"></div>
             <!-- overlay -->
         </div>
 
-        <!-- refbar -->
+        <!-- ref_bar -->
         <div class="refbar">
             <div class="refbar_element">
                 <i class="material-symbols-outlined icon" id="refbar_home">home</i>
@@ -610,12 +575,13 @@
 
         <!-- scroll_bar -->
         <div class="scroll_container">
-            
-            <div id="left_arow" class="scroll_container_arrow">
-                <div class="bound_btn">
-                    <i class="material-symbols-outlined icon">
-                        navigate_before
-                    </i>
+            <div id="left_arrow" class="scroll_container_arrow">
+                <div class="boundcolor">
+                    <div class="bound_btn margin-08 ">
+                        <i class="material-symbols-outlined icon">
+                            navigate_before
+                        </i>
+                    </div>
                 </div>
                 <div class="filter"></div>
             </div>
@@ -636,26 +602,705 @@
             <div class="scroll_container_item">mới tải lên gần đây</div>
             <div class="scroll_container_item">đã xem</div>
             <div class="scroll_container_item">đề xuất</div>
-            
-            <div id="right_arow" class="scroll_container_arrow">
-                <div class="bound_btn">
-                    <i class="material-symbols-outlined icon">
-                        navigate_next
-                    </i>
+
+            <div id="right_arrow" class="scroll_container_arrow">
+                <div class="boundcolor">
+                    <div class="bound_btn margin-08">
+                        <i class="material-symbols-outlined icon">
+                            navigate_next
+                        </i>
+                    </div>
                 </div>
                 <div class="filter"></div>
             </div>
+
+
+
         </div>
 
         <!-- listvideo -->
         <div class="listvideo">
+            <div class="listvideo_row">
+                <div class="video_item"></div>
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
 
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="video_item">
+                    <div class="video_item_thumbnail"></div>
+
+                    <div class="bound video_item_contet">
+                        <div class="img bound_btn align-self-flexstart"></div>
+
+                        <div class="para">
+                            <h1>Review Tro Tàn Rực Rỡ | Cuối Cùng Thì Phim Việt Cũng Hay</h1>
+                            <div class="">
+                                <div class="bound flex-start">
+                                    <a href="">W2W Movie</a>
+                                    <i class="material-symbols-outlined icon">
+                                        check_circle
+                                    </i>
+                                </div>
+
+                                <div class="bound flex-start">
+                                    <p class="">14 N lượt xem</p>
+                                    <i class="dot"></i>
+                                    <p class="">9 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="./index.js">
-
-    </script>
+    <script src="./index.js"></script>
 
 </body>
 
